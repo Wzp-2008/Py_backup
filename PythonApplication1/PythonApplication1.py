@@ -1,0 +1,1 @@
+with open("csv.txt") as csv:    a = csv.read()print(a)b = a.split("/")print(b)
