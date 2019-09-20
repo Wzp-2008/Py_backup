@@ -37,5 +37,3 @@ while True:
         else:
             print("登录成功！")
             Password_c = 0
-            breakpoint
-            
