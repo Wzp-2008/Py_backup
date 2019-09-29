@@ -5,6 +5,6 @@ HTML = requests.get(url)
 HTML.encoding = "utf-8"
 HTML = HTML.text
 soup = BeautifulSoup(HTML)
-soup_t = soup.prettify()
+soup_t = soup.prettify
 p = soup.find_all("span")
 print(p)
