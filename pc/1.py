@@ -6,4 +6,5 @@ HTML.encoding = "utf-8"
 HTML = HTML.text
 soup = BeautifulSoup(HTML)
 soup_t = soup.prettify()
+find_all("tr")
 print(soup_t)
