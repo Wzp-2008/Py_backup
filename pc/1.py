@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-url = "http://www.baidu.com"
+url = "https://fanyi.baidu.com/?aldtype=16047#en/zh/Zoom"
 HTML = requests.get(url)
 HTML.encoding = "utf-8"
 HTML = HTML.text
