@@ -1,4 +1,4 @@
-import bu
+import beautifulsoup4
 import requests
 url = "www.baidu.com"
 HTML = requests.get(url)
