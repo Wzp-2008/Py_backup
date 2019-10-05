@@ -1,10 +1,10 @@
 from bs4 import BeautifulSoup
 import requests
-url = "https://www.bilibili.com/video/av58329669"
+url = "https://translate.google.cn/?hl=zh-CN#view=home&op=translate&sl=en&tl=zh-CN&text=Hello!"
 HTML = requests.get(url)
-HTML.encoding = "utf-8"
+#HTML.encoding = "utf-8"
 HTML = HTML.text
-soup = BeautifulSoup(HTML)
-soup_t = soup.prettify
-p = soup.find_all("span")
+soup = BeautifulSoup(HTML,"html.parser")
+soup_t = soup.prettify()
+p = soup.find_all("div",class_="result-shield-container tlid-copy-target")
 print(p)
