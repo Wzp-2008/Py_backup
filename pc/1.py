@@ -1,10 +1,14 @@
 from bs4 import BeautifulSoup
 import requests
-url = "https://translate.google.cn/?hl=zh-CN#view=home&op=translate&sl=en&tl=zh-CN&text=Hello!"
+url = "https://mcversions.net/"
 HTML = requests.get(url)
 #HTML.encoding = "utf-8"
 HTML = HTML.text
 soup = BeautifulSoup(HTML,"html.parser")
 soup_t = soup.prettify()
-p = soup.find_all("div",class_="result-shield-container tlid-copy-target")
-print(p)
+s = soup.find_all("strong",class_="version")
+li = soup.find_all("li",class_="list-group-item release")
+for i in s:
+    print(i)
+for i in li:
+    print(i)
